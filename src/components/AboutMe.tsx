@@ -1,0 +1,69 @@
+"use client";
+import { useEffect } from "react";
+import { motion, stagger, useAnimate } from "motion/react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+
+export const GenerateEffect = ({
+  words,
+  className,
+  filter = true,
+  duration = 3,
+}: {
+  words: string;
+  className?: string;
+  filter?: boolean;
+  duration?: number;
+}) => {
+  const [scope, animate] = useAnimate();
+    const wordsArray = words.split(" ");
+    useEffect(() => {
+    animate(
+      "span",
+      {
+        opacity: 1,
+        filter: filter ? "blur(0px)" : "none",
+      },
+      {
+        duration: duration ?? 1,
+        delay: stagger(0.2),
+      }
+    );
+  }, [animate, duration, filter]);
+  
+
+  const renderWords = () => {
+    return (
+      <motion.div ref={scope}>
+        {wordsArray.map((word, idx) => {
+          return (
+            <motion.span
+              key={word + idx}
+              className="dark:text-white text-black opacity-0"
+              style={{
+                filter: filter ? "blur(10px)" : "none",
+              }}
+            >
+              {word}{" "}
+            </motion.span>
+          );
+        })}
+      </motion.div>
+    );
+  };
+
+  return (
+    <div className={cn("font-bold", className)}>
+          <div className="mt-1 flex flex-row">
+              <div>
+              <div className="text-md font-medium leading-relaxed tracking-wide text-gray-700 dark:text-gray-300 max-w-xl min-h-xl">
+              I&apos;m a freelance full-stack developer specializing in the MERN stack, Next.js, and Tailwind CSS. I build fast, responsive, and scalable web applications — from pixel-perfect UI to powerful backend. Whether it&apos;s a landing page or a complete platform, I turn ideas into live, production-ready websites.              </div>
+              <Link href="#">Download my Resume</Link>
+              </div>
+              <div className=" dark:text-white text-black text-7xl  leading-snug tracking-wide">
+          {renderWords()}
+              </div>
+      </div>
+    </div>
+  );
+};
