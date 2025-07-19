@@ -9,6 +9,8 @@ import {
 } from "@/components/Navbar";
 import { ThreeDMarquee } from "@/components/HeroSide";
 import { GenerateEffect } from "@/components/AboutMe";
+import AllSkills from "@/components/Skills";
+import { Carousel } from "@/components/Projects";
 
 
 export default function Home() {
@@ -37,6 +39,37 @@ export default function Home() {
     "/Hero/mern-stack-developer.png",
     "/Hero/web-developer.png",
   ];
+
+
+  
+const slides = [
+  {
+    title: "Explore the Mountains",
+    button: "Learn More",
+    src: "/Project/ecommers.png",
+href:"https://people-mart-nikita.netlify.app/"
+  },
+  {
+    title: "Beachside Vibes",
+    button: "Get Started",
+    src: "/Project/peopleCo.png",
+    href:"https://people-co-nikita.netlify.app/PeopleDirectory"
+  },
+  {
+    title: "City Adventures",
+    button: "Discover",
+    src: "/Project/bookmyshow.png",
+    href:"https://bootstrap-bookmyshow-clone.netlify.app/moviepage"
+  },
+  {
+    title: "City Adventures",
+    button: "Discover",
+    src: "/Project/tinDog.png",
+    href:"https://tin-dog-website-clone.netlify.app/"
+  },
+];
+
+
   
 
   return (
@@ -47,7 +80,7 @@ export default function Home() {
           <NavItems
             items={[
               { name: "Home", link: "#" },
-              { name: "About", link: "#about" },
+              { name: "About", link: "about" },
               { name: "Contact", link: "#contact" },
             ]}
           />
@@ -66,9 +99,11 @@ export default function Home() {
           </div>
         </div>
       </BackgroundBeamsWithCollision>
-      <GenerateEffect className="px-4 my-20" words="Hi,
-I'm Nikita
-WebDeveloper"/>
+      <GenerateEffect className="px-4 my-56"  words="Hi,
+I'm Nikita      
+Web Developer"/>
+      <AllSkills />
+      <Carousel slides={slides} />
     </div>
   );
 }

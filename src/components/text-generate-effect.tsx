@@ -61,7 +61,9 @@ export const TextGenerateEffect = ({
               <div className="text-md font-medium leading-relaxed tracking-wide text-gray-700 dark:text-gray-300 max-w-xl min-h-xl">
               I build fast, user-friendly web apps with clean UI and efficient backend systems. Focused on solving real problems through code.
               </div>
-              <Link href="#">About Me</Link>
+              <button type="button" className="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+          <Link href="#about">About Me</Link>
+          </button>
       </div>
     </div>
   );
