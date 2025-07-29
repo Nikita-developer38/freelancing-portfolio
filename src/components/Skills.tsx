@@ -44,11 +44,30 @@
 
 // export default Skills;
 
-
 "use client";
 import React from "react";
-import { FaReact, FaNodeJs, FaGitAlt, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs,SiUpstash, SiTailwindcss,SiClickup, SiExpress, SiMysql, SiMongodb,  SiJirasoftware, SiPostman,  SiGithub,  SiOpenai } from "react-icons/si";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
+  FaBootstrap,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiNextdotjs,
+  SiUpstash,
+  SiTailwindcss,
+  SiClickup,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiJirasoftware,
+  SiPostman,
+  SiGithub,
+  SiOpenai,
+} from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 import { FaCube } from "react-icons/fa6";
 import { BiLogoVisualStudio } from "react-icons/bi";
@@ -57,29 +76,59 @@ const skills = [
   {
     title: "Frontend Technologies",
     items: [
-      { name: "React JS", icon: <FaReact className="text-cyan-400 text-3xl" /> },
-      { name: "Next JS", icon: <SiNextdotjs className="text-black text-3xl" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400 text-3xl" /> },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 text-3xl" /> },
+      {
+        name: "React JS",
+        icon: <FaReact className="text-cyan-400 text-3xl" />,
+      },
+      {
+        name: "Next JS",
+        icon: <SiNextdotjs className="text-black text-3xl" />,
+      },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript className="text-yellow-400 text-3xl" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="text-sky-400 text-3xl" />,
+      },
       { name: "HTML5", icon: <FaHtml5 className="text-orange-500 text-3xl" /> },
       { name: "CSS3", icon: <FaCss3Alt className="text-blue-600 text-3xl" /> },
-      { name: "Bootstrap", icon: <FaBootstrap className="text-purple-700 text-3xl" /> },
-      { name: "Material UI", icon: <MdDesignServices className="text-blue-400 text-3xl" /> },
+      {
+        name: "Bootstrap",
+        icon: <FaBootstrap className="text-purple-700 text-3xl" />,
+      },
+      {
+        name: "Material UI",
+        icon: <MdDesignServices className="text-blue-400 text-3xl" />,
+      },
     ],
   },
   {
     title: "Backend Technologies",
     items: [
-      { name: "Next.js API Routes", icon: <SiNextdotjs className="text-black text-3xl" /> },
-      { name: "Express JS", icon: <SiExpress className="text-gray-700 text-3xl" /> },
-      { name: "Node JS", icon: <FaNodeJs className="text-green-500 text-3xl" /> },
+      {
+        name: "Next.js API Routes",
+        icon: <SiNextdotjs className="text-black text-3xl" />,
+      },
+      {
+        name: "Express JS",
+        icon: <SiExpress className="text-gray-700 text-3xl" />,
+      },
+      {
+        name: "Node JS",
+        icon: <FaNodeJs className="text-green-500 text-3xl" />,
+      },
     ],
   },
   {
     title: "Databases & Message Brokers",
     items: [
       { name: "MySQL", icon: <SiMysql className="text-blue-600 text-3xl" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-3xl" /> },
+      {
+        name: "MongoDB",
+        icon: <SiMongodb className="text-green-600 text-3xl" />,
+      },
       { name: "Redis", icon: <SiUpstash className="text-red-600 text-3xl" /> },
     ],
   },
@@ -93,16 +142,31 @@ const skills = [
   {
     title: "Project Management",
     items: [
-      { name: "Jira", icon: <SiJirasoftware className="text-blue-600 text-3xl" /> },
-      { name: "ClickUp", icon: <SiClickup className="text-pink-600 text-3xl" /> }, // Placeholder icon
+      {
+        name: "Jira",
+        icon: <SiJirasoftware className="text-blue-600 text-3xl" />,
+      },
+      {
+        name: "ClickUp",
+        icon: <SiClickup className="text-pink-600 text-3xl" />,
+      }, // Placeholder icon
     ],
   },
   {
     title: "Tools & Platforms",
     items: [
-      { name: "Postman", icon: <SiPostman className="text-orange-500 text-3xl" /> },
-      { name: "VS Code", icon: <BiLogoVisualStudio className="text-blue-500  text-3xl" /> },
-      { name: "Cursor IDE", icon: <FaCube className="text-gray-500 text-3xl" /> }, // Placeholder icon
+      {
+        name: "Postman",
+        icon: <SiPostman className="text-orange-500 text-3xl" />,
+      },
+      {
+        name: "VS Code",
+        icon: <BiLogoVisualStudio className="text-blue-500  text-3xl" />,
+      },
+      {
+        name: "Cursor IDE",
+        icon: <FaCube className="text-gray-500 text-3xl" />,
+      }, // Placeholder icon
       { name: "OpenAI", icon: <SiOpenai className="text-black text-3xl" /> },
     ],
   },
@@ -110,7 +174,7 @@ const skills = [
 
 const AllSkills = () => {
   return (
-    <section id="skills" className="py-12 bg-gray-50">
+    <section id="skills" className="py-12 bg-gray-50 dark:bg-black">
       <h2 className="text-4xl font-bold text-center mb-10">Technical Skills</h2>
       <div className="space-y-12 max-w-6xl mx-auto px-4">
         {skills.map((category) => (
@@ -123,7 +187,9 @@ const AllSkills = () => {
                   className="flex flex-col items-center justify-center p-4 bg-white rounded-xl shadow hover:shadow-md transition"
                 >
                   {icon}
-                  <p className="mt-2 text-base font-medium text-center">{name}</p>
+                  <p className="mt-2 text-base dark:text-black font-medium text-center">
+                    {name}
+                  </p>
                 </div>
               ))}
             </div>

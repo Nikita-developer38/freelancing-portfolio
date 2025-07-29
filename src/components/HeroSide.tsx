@@ -4,13 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 // GridLineVertical Component
-const GridLineVertical = ({
-  className,
-
-}: {
-  className?: string;
-  
-}) => {
+const GridLineVertical = ({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
@@ -24,7 +18,7 @@ const GridLineVertical = ({
         "[mask-composite:exclude]",
         "z-30",
         "dark:bg-[linear-gradient(to_bottom,var(--color-dark,rgba(255,255,255,0.2)),var(--color-dark,rgba(255,255,255,0.2))_50%,transparent_0,transparent)]",
-        className,
+        className
       )}
     ></div>
   );
@@ -33,7 +27,6 @@ const GridLineVertical = ({
 // GridLineHorizontal Component
 const GridLineHorizontal = ({
   className,
-  
 }: {
   className?: string;
   offset?: string;
@@ -51,7 +44,7 @@ const GridLineHorizontal = ({
         "[mask-composite:exclude]",
         "z-30",
         "dark:bg-[linear-gradient(to_right,var(--color-dark,rgba(255,255,255,0.2)),var(--color-dark,rgba(255,255,255,0.2))_50%,transparent_0,transparent)]",
-        className,
+        className
       )}
     ></div>
   );
@@ -75,7 +68,7 @@ export const ThreeDMarquee = ({
     <div
       className={cn(
         "mx-auto block h-[600px] overflow-hidden rounded-2xl bg-white",
-        className,
+        className
       )}
     >
       <div className="flex size-full items-center justify-center">
@@ -99,7 +92,7 @@ export const ThreeDMarquee = ({
               >
                 <GridLineVertical className="-left-4" />
                 {subarray.map((image, imageIndex) => (
-                  <div  key={imageIndex + image}>
+                  <div key={imageIndex + image}>
                     <GridLineHorizontal className="-top-4" offset="20px" />
                     <motion.img
                       whileHover={{ y: -10 }}
